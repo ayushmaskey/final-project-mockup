@@ -99,7 +99,7 @@
         {
           "firstName": "Swimming",
           "lastName": "Club",
-          "username": "s  im",
+          "username": "swim",
           "bio": "train to swim the molokai channel.",
           "interests": [
             "swim"
@@ -135,7 +135,7 @@
         {
           "firstName": "Meteor",
           "lastName": "club",
-          "username": "meteor",
+          "username": "user",
           "bio": "meteor watching.",
           "interests": [
             "star gazing",
