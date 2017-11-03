@@ -1,6 +1,6 @@
 # final-project-mockup
 
-#Table of content
+## Table of content
  * [Landing page](#landing)
  * [User profile page](#profile) 
  * [Club admin page](#club)
