@@ -11,13 +11,13 @@
  ![landing](/app/public/images/landing-page.png)
  
  # User profile page
- ![](images/profile-page.png)
+ ![profile](/app/public/images/profile-page.png)
  
  # Club admin page
- ![](images/club-admin.png)
+ ![club admin](/app/public/images/club-admin.png)
  
  # Site admin page
- ![](images/site-admin.png)
+ ![site admin](/app/public/images/site-admin.png)
  
  # UH cas login page
- ![](images/cas.png)
+ ![cas](/app/public/images/cas.png)
