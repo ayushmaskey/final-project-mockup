@@ -1,0 +1,45 @@
+<template name="Club_Admin_Page">
+
+	{{#if Template.subscriptionsReady}}
+
+		<div class="ui text container segment">
+
+			<div class="ui dividing header">
+				Get started with your club
+			</div>
+
+			<form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+				<div class="fields">
+					{{> Text_Form_Control label="Name" placeholder="Name of your club" value=club.name errorMessage=(fieldError "name")}}
+				</div>
+
+				<div class="two fields">
+					{{> Text_Form_Control label="First" placeholder="Club Admin First Name" value=club.first errorMessage=(fieldError "firstName")}}
+					{{> Text_Form_Control label="Last" placeholder="Club Admin Last Name" value=club.last errorMessage=(fieldError "lastName")}}
+				</div>
+
+
+				<div class="field">
+					{{> Select_Form_Control label="Activities" options=activities errorMessage=(fieldError "activities") multiple=true }}
+					{{> Text_Form_Control label="Date" placeholder="date" value=club.date errorMessage=(fieldError "date")}}
+				</div>
+
+				{{> TextArea_Form_Control label="Goal" value=club.moto placeholder="Moto of the club" errorMessage=(fieldError "club")}}
+
+				<div class="fields">
+				{{> Select_Form_Control label="Members" options=members errorMessage=(fieldError "members") multiple=true }}
+				</div>
+
+				<button class="ui primary button" type="submit">Submit</button>
+				{{#if displaySuccessMessage}}
+					<div class="ui success message">
+						<p>Club  data successfully updated.</p>
+					</div>
+				{{/if}}
+			</form>
+		</div>
+
+	{{/if}}
+
+</template>

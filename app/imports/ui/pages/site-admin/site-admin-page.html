@@ -1,0 +1,38 @@
+<template name="Site_Admin_Page">
+
+	{{#if Template.subscriptionsReady}}
+
+		<div class="ui text container segment">
+			<div class="ui dividing header">
+				Welcome site administrator
+			</div>
+			<form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+
+
+				<div class="fields">
+					{{> Text_Form_Control label="First" placeholder="First Name" value=profile.firstName errorMessage=(fieldError "firstName")}}
+					{{> Text_Form_Control label="Last" placeholder="Last Name" value=profile.lastName errorMessage=(fieldError "lastName")}}
+				</div>
+
+				<div class="field">
+					{{> Select_Form_Control label="Existing Clubs" options=clubs multiple=true }}
+				</div>
+
+				<div class="field">
+					{{> Select_Form_Control label="New clubs application" options=newclub multiple=true }}
+				</div>
+
+
+				<button class="ui primary button" type="submit">Submit</button>
+				{{#if displaySuccessMessage}}
+					<div class="ui success message">
+						<p>Site data successfully updated.</p>
+					</div>
+				{{/if}}
+			</form>
+		</div>
+
+	{{/if}}
+
+</template>

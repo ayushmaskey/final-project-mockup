@@ -2,7 +2,6 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import { $ } from 'meteor/jquery';
 
-
 /*                        LANDING ROUTE                       */
 
 export const landingPageRouteName = 'Landing_Page';
@@ -14,28 +13,26 @@ FlowRouter.route('/', {
 });
 
 /*                        DIRECTORY ROUTE                       */
-
-function addDirectoryBodyClass() {
-  $('body').addClass('directory-page-body');
-}
-
-function removeDirectoryBodyClass() {
-  $('body').removeClass('directory-page-body');
-}
-
-export const directoryPageRouteName = 'Directory_Page';
-FlowRouter.route('/directory', {
-  name: directoryPageRouteName,
-  action() {
-    BlazeLayout.render('Directory_Layout', { main: directoryPageRouteName });
-  },
-  triggersEnter: [addDirectoryBodyClass],
-  triggersExit: [removeDirectoryBodyClass],
-});
-
+//
+// function addDirectoryBodyClass() {
+//   $('body').addClass('directory-page-body');
+// }
+//
+// function removeDirectoryBodyClass() {
+//   $('body').removeClass('directory-page-body');
+// }
+//
+// export const directoryPageRouteName = 'Directory_Page';
+// FlowRouter.route('/directory', {
+//   name: directoryPageRouteName,
+//   action() {
+//     BlazeLayout.render('Directory_Layout', { main: directoryPageRouteName });
+//   },
+//   triggersEnter: [addDirectoryBodyClass],
+//   triggersExit: [removeDirectoryBodyClass],
+// });
 
 /*                        USER ROUTES                      */
-
 
 function addUserBodyClass() {
   $('body').addClass('user-layout-body');
@@ -74,3 +71,31 @@ FlowRouter.notFound = {
     BlazeLayout.render('Page_Not_Found');
   },
 };
+
+/*                        Club Admin ROUTES                      */
+
+export const clubAdminPageRouteName = 'Club_Admin_Page';
+userRoutes.route('/clubadmin', {
+  name: clubAdminPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: clubAdminPageRouteName });
+  },
+});
+
+/*                        Site Admin ROUTES                      */
+
+export const siteAdminPageRouteName = 'Site_Admin_Page';
+userRoutes.route('/siteadmin', {
+  name: siteAdminPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: siteAdminPageRouteName });
+  },
+});
+
+export const directoryPageRouteName = 'Directory_Page';
+userRoutes.route('/directory', {
+  name: directoryPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: directoryPageRouteName });
+  },
+});
