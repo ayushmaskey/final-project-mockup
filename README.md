@@ -8,7 +8,7 @@
  * [UH cas login page](#cas)
  
  # Landing page
- ![landing](images/landing-page.png)
+ ![landing](/app/public/images/landing-page.png)
  
  # User profile page
  ![](images/profile-page.png)
